@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+$primary: #dbbea1ff;
+$secondary: #a37b73ff;
+
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+);
+$custom-colors: (
+  'third': #3e282bff,
+  'fourth': #d34f73ff,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$enable-negative-margins: true;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
