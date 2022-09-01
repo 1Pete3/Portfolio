@@ -4,12 +4,10 @@ import logo from '../../images/logo.png';
 import Home from '../Home/home';
 import { Outlet } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
-import { motion } from 'framer-motion';
-
 import './navbar.css'
 //https://faiizii992.medium.com/creating-a-navbar-using-react-router-dom-and-react-bootstrap-react-router-bootstrap-e6b59015a5ec
 const TopNav = () => (
-  <Navbar collapseOnSelect expand="lg" className="bg-primary">
+  <Navbar collapseOnSelect expand="lg" className="bg-primary navContent TopNav">
     <LinkContainer to="/">
       <Navbar.Brand>
         <img src={logo} width="150" alt="logo" className="ms-5" exact path="/" component={Home} to="/" />

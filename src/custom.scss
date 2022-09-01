@@ -16,4 +16,3 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 $enable-negative-margins: true;
 
 @import '../node_modules/bootstrap/scss/bootstrap';
-
