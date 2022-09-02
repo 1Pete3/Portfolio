@@ -1,0 +1,13 @@
+.map-container{
+    width:600px;
+    height: 50vh;
+    border-radius:5px;
+}
+
+.form-textArea
+{
+    height: 100px;
+}
+Form{
+    border-radius: 5px;
+}

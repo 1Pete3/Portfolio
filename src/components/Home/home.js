@@ -12,7 +12,7 @@ const Home = () => (
     <TopNav />
     <Row className='m-0'>
       <Col xs={12} md={8} className='m-5'>
-        <Card className="p-3 bg-secondary border border-3 w-50 " border="fourth">
+        <Card className="p-3 bg-secondary border border-3 w-50 mt-5 " border="fourth">
           <Card.Body>
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
