@@ -1,4 +1,5 @@
 import TopNav from '../Navbar/navbar'
+import './about.css'
 const About = () =>(
     <div className='AboutPage'>
         <TopNav />

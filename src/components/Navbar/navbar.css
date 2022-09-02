@@ -2,3 +2,11 @@
 {
     font-size: 26px !important;
 }
+a {
+    -webkit-transition: color 2s;
+    transition: color 2s;
+  }
+  
+  a:hover{
+    color:#d34f73ff !important;
+  }

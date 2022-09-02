@@ -10,8 +10,8 @@ import Col from 'react-bootstrap/Col';
 const Home = () => (
   <div className="HomePage bg-third text-fourth homePage">
     <TopNav />
-    <Row className='m-0'>
-      <Col xs={12} md={8} className='m-5'>
+    <Row className="m-0">
+      <Col xs={12} md={8} className="m-5">
         <Card className="p-3 bg-secondary border border-3 w-50 mt-5 " border="fourth">
           <Card.Body>
             <motion.div
@@ -31,16 +31,23 @@ const Home = () => (
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 5, delay: 8 }}
             >
-              <LinkContainer to="/Projects">
-                <Button variant="primary" size="sm" className="text-third mt-3 fs-4">
-                  Check Out Peter's Projects
-                </Button>
-              </LinkContainer>
+              <motion.div
+                className="box"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+              >
+                <LinkContainer to="/Projects">
+                  <Button variant="primary" size="sm" className="text-third mt-3 fs-4">
+                    Check Out Peter's Projects
+                  </Button>
+                </LinkContainer>
+              </motion.div>
             </motion.div>
           </Card.Body>
         </Card>
       </Col>
-      <Col className='mt-4 me-5 ' >
+      <Col className="mt-4 me-5 ">
         <Notifications />
       </Col>
     </Row>
