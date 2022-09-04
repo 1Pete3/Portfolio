@@ -7,9 +7,11 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 import './navbar.css';
 
-
 //https://faiizii992.medium.com/creating-a-navbar-using-react-router-dom-and-react-bootstrap-react-router-bootstrap-e6b59015a5ec
-const TopNav = () => (
+const TopNav = () => {
+  const location = useLocation();
+  
+  return(
   <Navbar collapseOnSelect expand="lg" className="bg-primary navContent TopNav">
     <motion.div whileHover={{ scale: 1.1 }} transition={{ type: 'spring', stiffness: 200, damping: 10 }}>
       <LinkContainer to="/">
@@ -20,26 +22,26 @@ const TopNav = () => (
     </motion.div>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mx-5" />
     <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end me-5">
-      <Nav>
-        <motion.div whileHover={{ scale: 1.4 }} transition={{ type: 'spring', stiffness: 400, damping: 10 }}>
+      <Nav className='mx-5'>
+        <motion.div whileHover={{ scale: 1.3}} transition={{ type: 'spring', stiffness: 400, damping: 10 }} className='mx-2'>
           <LinkContainer to="/About">
-            <Nav.Link className="text-third">About</Nav.Link>
+            <Nav.Link className={location.pathname === "/About" ? "text-fourth":"text-third"}>About</Nav.Link>
           </LinkContainer>
         </motion.div>
-        <motion.div whileHover={{ scale: 1.4 }} transition={{ type: 'spring', stiffness: 400, damping: 10 }}>
+        <motion.div whileHover={{ scale: 1.3 }} transition={{ type: 'spring', stiffness: 400, damping: 10 }} className='mx-2'>
           <LinkContainer to="/Contact">
-            <Nav.Link className="text-third mx-5">Contact</Nav.Link>
+            <Nav.Link className={location.pathname === "/Contact" ? "text-fourth":"text-third "}>Contact</Nav.Link>
           </LinkContainer>
         </motion.div>
-        <motion.div whileHover={{ scale: 1.4 }} transition={{ type: 'spring', stiffness: 400, damping: 10 }}>
+        <motion.div whileHover={{ scale: 1.3 }} transition={{ type: 'spring', stiffness: 400, damping: 10 }} className='mx-2'>
           <LinkContainer to="/Projects">
-            <Nav.Link className="text-third">Projects</Nav.Link>
+            <Nav.Link className={location.pathname === "/Projects" ? "text-fourth":"text-third"}>Projects</Nav.Link>
           </LinkContainer>
         </motion.div>
       </Nav>
     </Navbar.Collapse>
     <Outlet />
   </Navbar>
-);
+)};
 
 export default TopNav;
