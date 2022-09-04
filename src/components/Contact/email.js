@@ -3,12 +3,25 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
+
 const Email = () => {
- 
+  const form = useRef();
+  const sendEmail = () => {
+    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID , form.current, process.env.REACT_APP_EMAILJS_PUBLIC_KEY).then(
+      (result) => {
+        alert('message sent successfully ✅');
+        console.log(result.text);
+      },
+      (error) => {
+        alert(error.text);
+      }
+    );
+  };
   return (
-    <Form className="border border-3 border-fourth m-2" >
+    <Form className="border border-3 border-fourth m-2" onSubmit={sendEmail} ref={form}>
       <Form.Group className="mb-3">
         <Row className="m-3">
           <Col lg={6}>
@@ -35,13 +48,19 @@ const Email = () => {
         </Col>
         <Col>
           <Form.Label className="text-fourth">Company Name</Form.Label>
-          <Form.Control type="text" placeholder="Enter Company" name="company"/>
+          <Form.Control type="text" placeholder="Enter Company" name="company" />
         </Col>
       </Row>
       <Row className="m-3">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label className="text-fourth">Message</Form.Label>
-          <Form.Control required as="textarea" placeholder="Leave a message for Pete here" className="form-textArea" name="message" />
+          <Form.Control
+            required
+            as="textarea"
+            placeholder="Leave a message for Pete here"
+            className="form-textArea"
+            name="message"
+          />
         </Form.Group>
       </Row>
       <Row className="m-3">

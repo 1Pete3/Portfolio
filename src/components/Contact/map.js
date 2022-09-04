@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import './contact.css'
 
-const apiKey = "YOUR KEY HERE"
+const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY
  const MyLocation = () => {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: apiKey,
