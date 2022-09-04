@@ -9,6 +9,6 @@
 html
 {
   background-color: #3e282bff;
+  min-height: 400px;
+  margin-bottom: 100px;
 }
-
-

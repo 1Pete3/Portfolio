@@ -3,9 +3,10 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { motion } from 'framer-motion';
 
+
 import './footer.css';
 const PageFooter = () => (
-  <div className="container-fluid bg-primary py-1 fixed-bottom">
+  <div className="container-fluid bg-primary py-1 fixed-bottom mt-4">
     <div className="d-flex justify-content-center">
       <motion.div whileHover={{ scale: 1.4 }} transition={{ type: 'spring', stiffness: 400, damping: 10 }}>
         <a href="https://www.linkedin.com/in/peter-skowronek/" target="_blank" rel="noreferrer">

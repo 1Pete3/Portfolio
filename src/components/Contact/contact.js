@@ -15,8 +15,8 @@ const Contact = () => (
           <Card className="bg-secondary border border-3 mx-5 mt-3 p-3  " border="fourth">
             <Card.Body>
               <Card.Title className="fs-1 text-primary mb-3 "> Contact Me 📲 </Card.Title>
-              <Card.Text className="text-third">
-                As a software developer I am always looking to expand my skills and learn new things. Currently I am
+              <Card.Text className="text-third fs-5">
+                As a <strong>software developer</strong> I am always looking to expand my skills and learn new things. Currently I am
                 looking for a <strong>full time position</strong> that is remote, hybird, or in office. I would also
                 consider other job types and relocating. I am willing to collaberate with other developers on projects
                 so feel to get in contact through LinkedIn or filling the form.
