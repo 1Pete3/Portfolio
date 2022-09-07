@@ -15,8 +15,8 @@ const TopNav = () => {
   <Navbar collapseOnSelect expand="lg" className="bg-primary navContent TopNav">
     <motion.div whileHover={{ scale: 1.1 }} transition={{ type: 'spring', stiffness: 200, damping: 10 }}>
       <LinkContainer to="/">
-        <Navbar.Brand>
-          <img src={logo} width="150" alt="logo" className="ms-5" exact path="/" component={Home} to="/" />
+        <Navbar.Brand className="ms-5">
+          <img src={logo} width="150" alt="logo"  exact path="/" component={Home} to="/" className="ms-4"/>
         </Navbar.Brand>
       </LinkContainer>
     </motion.div>

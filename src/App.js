@@ -18,6 +18,7 @@ function App() {
         <Route path="Projects" element={<Projects />} />
       </Routes>
       <PageFooter />
+      
     </div>
   );
 }

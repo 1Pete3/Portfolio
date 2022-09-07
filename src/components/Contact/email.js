@@ -6,19 +6,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
+import { motion } from 'framer-motion';
 
 const Email = () => {
   const form = useRef();
   const sendEmail = () => {
-    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID , form.current, process.env.REACT_APP_EMAILJS_PUBLIC_KEY).then(
-      (result) => {
-        alert('message sent successfully ✅');
-        console.log(result.text);
-      },
-      (error) => {
-        alert(error.text);
-      }
-    );
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          alert('message sent successfully ✅');
+          console.log(result.text);
+        },
+        (error) => {
+          alert(error.text);
+        }
+      );
   };
   return (
     <Form className="border border-3 border-fourth m-2" onSubmit={sendEmail} ref={form}>
@@ -65,9 +73,11 @@ const Email = () => {
       </Row>
       <Row className="m-3">
         <Col className="d-flex justify-content-center">
-          <Button type="submit" className="mb-2 bg-fourth border-secondary text-primary border">
-            Submit <FontAwesomeIcon icon={faCheckCircle} />
-          </Button>
+          <motion.div whileHover={{ scale: 1.3 }} transition={{ type: 'spring', stiffness: 200, damping: 10 }}>
+            <Button type="submit" className="mb-2 bg-fourth border-secondary text-primary border">
+              Submit <FontAwesomeIcon icon={faCheckCircle} />
+            </Button>
+          </motion.div>
         </Col>
       </Row>
     </Form>

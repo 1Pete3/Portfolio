@@ -3,7 +3,6 @@ import MyLocation from './map';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Email from './email';
 const Contact = () => (
@@ -19,7 +18,7 @@ const Contact = () => (
                 As a <strong>software developer</strong> I am always looking to expand my skills and learn new things. Currently I am
                 looking for a <strong>full time position</strong> that is remote, hybird, or in office. I would also
                 consider other job types and relocating. I am willing to collaberate with other developers on projects
-                so feel to get in contact through LinkedIn or filling the form.
+                so feel to get in contact through <a href='https://www.linkedin.com/in/peter-skowronek' target='_blank' rel="noreferrer">LinkedIn</a> or filling the form.
               </Card.Text>
             </Card.Body>
           </Card>
