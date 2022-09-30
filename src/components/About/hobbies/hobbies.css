@@ -1,0 +1,13 @@
+.d-block{
+    height: 50vh;
+    display:inline-block;
+}
+img
+{
+    border-radius: 5px;
+}
+.carouselContainer{
+    width: fit-content !important;
+    margin-left: auto;
+    margin-right: auto;
+}

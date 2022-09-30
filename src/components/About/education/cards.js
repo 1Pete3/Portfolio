@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll } from 'framer-motion';
-import './cards.css';
+import './education.css';
 import Skills from './skills';
 import skillsData from './skillsData';
 const Cards = () => {

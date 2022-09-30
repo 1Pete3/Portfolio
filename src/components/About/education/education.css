@@ -1,0 +1,90 @@
+#progress {
+  transform: rotate(-90deg);
+}
+
+circle {
+  stroke-width: 12%;
+  fill: none;
+}
+
+.bg {
+  stroke: #dbbea1ff;
+  opacity: 0.5;
+}
+
+#progress .indicator {
+  stroke: white;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  height: 300px;
+  overflow-x: scroll;
+  background-color: #dbbea1ff;
+  padding: 20px;
+  flex: 0 0 100px;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  height: 12px;
+  width: 10px;
+  background: #fff3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+::-webkit-scrollbar-corner {
+  background: #fff3;
+ 
+}
+
+.flipcard {
+  flex: 0 0 200px;
+  margin-right: 20px;
+  padding: 1px;
+  cursor: pointer;
+  
+}
+
+.flipcardContent {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+
+.flipcardFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+  backface-visibility: hidden;
+}
+
+.flipcardFront {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flipcardBack {
+  background-color: #f3f3f3;
+  transform: rotateY(180deg);
+}
+
+.flipcardLogo {
+    height: 80%;
+    margin: auto;
+    display: block;
+    padding: 10px;
+  }

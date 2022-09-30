@@ -23,6 +23,7 @@
     "gsap-trial": "^3.11.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
+    "react-card-flip": "^1.1.5",
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.0.2",
     "react-loaders": "^3.0.1",
