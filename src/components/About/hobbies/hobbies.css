@@ -11,3 +11,10 @@ img
     margin-left: auto;
     margin-right: auto;
 }
+.hobbyLinks {
+    -webkit-transition: color 2s;
+    transition: color 2s;
+    color: #a37b73ff !important;
+  }
+  
+  

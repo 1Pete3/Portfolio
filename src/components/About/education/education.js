@@ -5,7 +5,7 @@ import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import Cards from './cards';
 import './education.css';
-const Education = (props) => (
+const Education = () => (
   <div className="educationSection">
     <h1 className="text-third">
       <strong>

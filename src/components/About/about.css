@@ -14,11 +14,12 @@ section:nth-child(2) {
 }
 
 section:nth-child(3) {
-  background: #d34f73ff;
+  background: #dbbea1ff ;
+
 }
 
 section:nth-child(4) {
-  background: #dbbea1ff;
+  background: #d34f73ff;
 }
 
 section span {
@@ -26,12 +27,6 @@ section span {
   transform: translateX(-100px);
   opacity: 0;
 }
-.hobbyLinks {
-  -webkit-transition: color 2s;
-  transition: color 2s;
-}
-
-
-.hobbyLinks:hover{
-  color:#a37b73ff !important;
+.channelThumbnails{
+  width:30%
 }

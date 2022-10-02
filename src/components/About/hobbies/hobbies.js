@@ -5,12 +5,12 @@ import { faBasketball } from '@fortawesome/free-solid-svg-icons';
 import HobbyImages from './hobbyImages'
 const Hobbies = () => (
   <div>
-    <h1 className="text-third">
+    <h1 className="text-fourth">
       <strong>
         Hobbies <FontAwesomeIcon icon={faBasketball} className="fa-bounce" />
       </strong>
     </h1>
-      <h4 className="text-third">
+      <h4 className="text-fourth">
         During my free time, I enjoy solving puzzles, building lego sets, watching/playing sports, traveling, collecting
         sneakers, playing video games, going to the gym and hanging out with friends. Most recently, a couple of friends
         and I went to{' '}

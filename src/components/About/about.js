@@ -3,7 +3,7 @@ import './about.css';
 import Section from './animation';
 import Education from './education/education'
 import Hobbies from './hobbies/hobbies'
-import Resources from './resources';
+import Resources from './resources/resources';
 const About = () => (
   <div className="AboutPage">
     <TopNav />

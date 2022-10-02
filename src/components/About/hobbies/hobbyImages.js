@@ -12,35 +12,35 @@ function HobbyImages() {
   return (
     <Carousel fade className="mt-5 carouselContainer">
       <Carousel.Item >
-        <img className="d-block mx-auto border border-3 border-primary shadow-lg" src={acadia1} alt="Acadia" />
+        <img className="d-block mx-auto border border-3 border-fourth shadow-lg" src={acadia1} alt="Acadia" />
       </Carousel.Item>
 
       <Carousel.Item>
-        <img className="d-block mx-auto border border-3 border-primary shadow-lg" src={acadia3} alt="Sand beach" />
+        <img className="d-block mx-auto border border-3 border-fourth shadow-lg" src={acadia3} alt="Sand beach" />
       </Carousel.Item>
 
       <Carousel.Item>
-        <img className="d-block mx-auto border border-3 border-primary shadow-lg" src={acadia2} alt="Acadia water" />
+        <img className="d-block mx-auto border border-3 border-fourth shadow-lg" src={acadia2} alt="Acadia water" />
       </Carousel.Item>
 
       <Carousel.Item>
-        <img className="d-block mx-auto border border-3 border-primary shadow-lg" src={sneakers} alt="Shoe Collection" />
+        <img className="d-block mx-auto border border-3 border-fourth shadow-lg" src={sneakers} alt="Shoe Collection" />
       </Carousel.Item>
 
       <Carousel.Item>
-        <img className="d-block mx-auto border border-3 border-primary shadow-lg" src={basketball} alt="Basketball court" />
+        <img className="d-block mx-auto border border-3 border-fourth shadow-lg" src={basketball} alt="Basketball court" />
       </Carousel.Item>
 
       <Carousel.Item>
-        <img className="d-block mx-auto border border-3 border-primary shadow-lg" src={mar} alt="Mario" />
+        <img className="d-block mx-auto border border-3 border-fourth shadow-lg" src={mar} alt="Mario" />
       </Carousel.Item>
 
       <Carousel.Item>
-        <img className="d-block mx-auto border border-3 border-primary shadow-lg" src={pc} alt="Pc" />
+        <img className="d-block mx-auto border border-3 border-fourth shadow-lg" src={pc} alt="Pc" />
       </Carousel.Item>
 
       <Carousel.Item>
-        <img className="d-block mx-auto border border-3 border-primary shadow-lg" src={car} alt="Car" />
+        <img className="d-block mx-auto border border-3 border-fourth shadow-lg" src={car} alt="Car" />
       </Carousel.Item>
     </Carousel>
   );
