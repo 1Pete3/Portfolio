@@ -1,8 +1,10 @@
 import TopNav from '../Navbar/navbar'
+import TravelJournal from './traveljournal';
+import './projects.css'
 const Projects = () =>(
     <div>
         <TopNav />
-        <h1> Projects</h1>
+        <TravelJournal />
     </div>
 )
 export default Projects;

@@ -8,7 +8,6 @@ const Resources = () => (
     <h1 className="text-primary">
       My Favorite Resources <FontAwesomeIcon icon={faLaptopCode} className="fa-bounce" />
     </h1>
-    <h2>{}</h2>
     <YouTube />
   </div>
 );
