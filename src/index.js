@@ -8,6 +8,7 @@ import Contact from './components/Contact/contact';
 import About from './components/About/about';
 import Projects from './components/Projects/projects';
 import PageNotFound from './components/404/pagenotfound';
+import Resume from './components/Resume/resume';
 import { Routes, Route, Navigate} from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,6 +21,7 @@ root.render(
         <Route path="About" element={<About />} />
         <Route path="Contact" element={<Contact />} />
         <Route path="Projects" element={<Projects />} />
+        <Route path="Resume" element={<Resume />} />
       </Routes>
     <App/>
   </BrowserRouter>,

@@ -1,0 +1,27 @@
+.thumbnail {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+.channelInfo {
+  width: 400px;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 20px;
+}
+.channelCard {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.channelTitle {
+  font-size: 25px;
+}
+.channelContent{
+    font-size: 18px;
+}
+hr{
+    border-width: 5px;
+}

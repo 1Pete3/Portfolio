@@ -9,8 +9,9 @@ const About = () => (
     <TopNav />
     <>
       <Section><Education /></Section>
-      <Section><Hobbies /></Section>
+      <Section ><Hobbies /></Section>
       <Section><Resources /></Section>
+     
     </>
   </div>
 );

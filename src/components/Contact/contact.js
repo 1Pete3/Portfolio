@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Email from './email';
 const Contact = () => (
-  <div className="ContactPage bg-third">
+  <div className="ContactPage bg-third pb-5">
     <TopNav />
     <Container fluid>
       <Row>
@@ -33,6 +33,9 @@ const Contact = () => (
         </Col>
       </Row>
     </Container>
+    <div className='bottom'>
+
+    </div>
   </div>
 );
 export default Contact;

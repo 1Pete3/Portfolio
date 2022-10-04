@@ -6,15 +6,15 @@ import { motion } from 'framer-motion';
 import Cards from './cards';
 import './education.css';
 const Education = () => (
-  <div className="educationSection">
-    <h1 className="text-third">
+  <div className="educationSection ">
+    <h1 className="text-third text-center ">
       <strong>
         Education <FontAwesomeIcon icon={faGraduationCap} className="fa-bounce" />{' '}
       </strong>{' '}
     </h1>
 
     <motion.div initial={{ opacity: 1, scale: 1, x: -2200 }} animate={{ x: 0 }} transition={{ duration: 5, delay: 0 }}>
-      <h4 className="text-third">
+      <h4 className="text-third text-center">
         I graduated from{' '}
         <a href="https://www2.ccsu.edu/" target="_blank" rel="noreferrer">
           Central Connecticut State University

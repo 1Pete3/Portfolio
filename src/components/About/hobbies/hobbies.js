@@ -4,7 +4,7 @@ import {} from '@fortawesome/free-regular-svg-icons';
 import { faBasketball } from '@fortawesome/free-solid-svg-icons';
 import HobbyImages from './hobbyImages'
 const Hobbies = () => (
-  <div>
+  <div className="text-center">
     <h1 className="text-fourth">
       <strong>
         Hobbies <FontAwesomeIcon icon={faBasketball} className="fa-bounce" />

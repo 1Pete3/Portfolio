@@ -21,7 +21,7 @@ const TopNav = () => {
       </LinkContainer>
     </motion.div>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" className="mx-5" />
-    <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end me-5">
+    <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
       <Nav className='mx-5'>
         <motion.div whileHover={{ scale: 1.3}} transition={{ type: 'spring', stiffness: 400, damping: 10 }} className='mx-2'>
           <LinkContainer to="/About">
@@ -36,6 +36,11 @@ const TopNav = () => {
         <motion.div whileHover={{ scale: 1.3 }} transition={{ type: 'spring', stiffness: 400, damping: 10 }} className='mx-2'>
           <LinkContainer to="/Projects">
             <Nav.Link className={location.pathname === "/Projects" ? "text-fourth":"text-third"}>Projects</Nav.Link>
+          </LinkContainer>
+        </motion.div>
+        <motion.div whileHover={{ scale: 1.3 }} transition={{ type: 'spring', stiffness: 400, damping: 10 }} className='mx-2'>
+          <LinkContainer to="/Resume">
+            <Nav.Link className={location.pathname === "/Resume" ? "text-fourth":"text-third"}>Resume</Nav.Link>
           </LinkContainer>
         </motion.div>
       </Nav>
