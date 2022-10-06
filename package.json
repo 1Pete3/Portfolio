@@ -4,24 +4,25 @@
   "private": true,
   "dependencies": {
     "@codemirror/autocomplete": "^6.3.0",
-    "@codesandbox/sandpack-react": "^1.8.8",
-    "@codesandbox/sandpack-themes": "^1.6.0",
+    "@codesandbox/sandpack-react": "^1.12.1",
+    "@codesandbox/sandpack-themes": "^1.12.0",
     "@emailjs/browser": "^3.7.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@octokit/core": "^4.0.5",
     "@react-google-maps/api": "^2.13.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "animate.css": "^4.1.1",
-    "axios": "^0.27.2",
-    "bootstrap": "^5.2.1",
+    "axios": "^1.0.0",
+    "bootstrap": "^5.2.2",
     "dotenv": "^16.0.3",
     "emailjs-com": "^3.2.0",
-    "framer-motion": "^7.5.1",
+    "framer-motion": "^7.5.2",
     "google-map-react": "^2.2.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
@@ -35,7 +36,7 @@
     "react-spring": "^9.5.5",
     "sass": "^1.55.0",
     "swiper": "^8.4.2",
-    "web-vitals": "^3.0.2"
+    "web-vitals": "^3.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -59,5 +60,8 @@
     "extends": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0"
   }
 }

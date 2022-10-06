@@ -25,7 +25,7 @@ const YouTube = () => {
         .then((response) => {
           // handle success
           setYoutubeData((youtubeData) => [...youtubeData, response.data.items[0]]);
-          console.log(response.data.items[0].snippet.customUrl);
+          console.log(Number(response.data.items[0].statistics.viewCount).toLocaleString());
         })
         .catch((error) => {
           // handle error

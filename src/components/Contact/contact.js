@@ -12,7 +12,7 @@ const Contact = () => (
       <Row>
         <Col className="m-3">
           <Card className="bg-secondary border border-3 mx-5 mt-3 p-3  " border="fourth">
-            <Card.Body>
+            <Card.Body className="text-center">
               <Card.Title className="fs-1 text-primary mb-3 "> Contact Me 📲 </Card.Title>
               <Card.Text className="text-third fs-5">
                 As a <strong>software developer</strong> I am always looking to expand my skills and learn new things. Currently I am

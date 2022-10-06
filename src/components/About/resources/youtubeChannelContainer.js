@@ -8,10 +8,10 @@ const YouTubeChannelContainer = (props) => {
       <h1 className="channelTitle text-primary">{props.items.snippet.title}</h1>
       <hr className='text-primary'/>
       <img src={props.items.snippet.thumbnails.high.url} alt="Channel thumbnail" className="thumbnail" />
-      <div className="text-light">
-        <p>Videos: {props.items.statistics.videoCount}</p>
-        <p>Subs: {props.items.statistics.subscriberCount}</p>
-        <p>Views: {props.items.statistics.viewCount}</p>
+      <div className="text-light channelNumbers">
+        <p>Videos: {Number(props.items.statistics.videoCount).toLocaleString()}</p>
+        <p>Subs: {Number(props.items.statistics.subscriberCount).toLocaleString()}</p>
+        <p>Views: {Number(props.items.statistics.viewCount).toLocaleString()}</p>
       </div>
       <Button
         className="bg-white text-red"

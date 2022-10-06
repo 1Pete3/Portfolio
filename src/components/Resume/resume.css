@@ -1,0 +1,14 @@
+.resume{
+    width: 1000px;
+    height: 1275px;
+    padding: 0;
+    overflow: hidden;
+    zoom:0.60;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+.resumeContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
