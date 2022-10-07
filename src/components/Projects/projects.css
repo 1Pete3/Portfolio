@@ -1,0 +1,7 @@
+@import url('https://quickutils.github.io/language-colors/language-colors.css');
+
+.githubStats {
+    display: flex;
+    margin-left: 100px;
+    margin-top: 10px;
+}

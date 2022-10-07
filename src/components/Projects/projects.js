@@ -15,12 +15,12 @@ const Projects = () => (
         pressing the icon in the bottom right corner of the project."
       githubUrl="https://github.com/1Pete3/Portfolio"
     />
-    <TravelJournal />
     <ProjectContainer
       title="Bank Teller"
       description=""
       githubUrl="https://github.com/1Pete3/Bank-Teller"
     />
+    
     
   </div>
 );
