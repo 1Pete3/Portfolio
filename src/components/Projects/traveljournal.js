@@ -1,8 +1,6 @@
 import { Sandpack } from '@codesandbox/sandpack-react';
 import { monokaiPro } from '@codesandbox/sandpack-themes';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import Button from 'react-bootstrap/Button';
+
 
 const code_appjs = `import NavBar from './navbar';
 import Location from './locations';
@@ -230,15 +228,7 @@ export default [
 
 export default function TravelJournal() {
   return (
-    <div className="bg-secondary text-third text-center border-5 border border-dark">
-      <h1 className="bg-third text-fourth text-center border-bottom border-dark">Travel Journal</h1>
-      <p>
-        This project was created using React, it features various places that I have visted. Feel free to mess around
-        with it by modifying the files. Different files can be accessed by{' '}
-        <strong>clicking on the items in the left navbar.</strong>This project can also be opened in code sandbox by
-        pressing the icon in the bottom right corner of the project.
-      </p>
-      <Button variant="light" className='border border-dark border-2 mb-2 text-dark githubBtn' href='https://github.com/1Pete3/Travel-Journal' target='_blank' rel='noreferrer'> View on GitHub <FontAwesomeIcon icon={faGithub}/></Button>
+    <div className="bg-secondary text-third text-center">
       <Sandpack
         options={{
           showLineNumbers: true, // default - true

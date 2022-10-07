@@ -6,11 +6,11 @@ async function gh(){
         auth: process.env.REACT_APP_GITHUB_KEY
       })
       
-      const response = await octokit.request('GET /repos/{owner}/{repo}/languages', {
+      const portfolioData = await octokit.request('GET /repos/{owner}/{repo}/languages', {
         owner: '1pete3',
         repo: 'Portfolio'
       })
-console.log(response)
+console.log(portfolioData)
 }
 const Github = () =>{
 gh();
