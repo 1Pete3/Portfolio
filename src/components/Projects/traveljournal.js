@@ -1,7 +1,6 @@
 import { Sandpack } from '@codesandbox/sandpack-react';
 import { monokaiPro } from '@codesandbox/sandpack-themes';
 
-
 const code_appjs = `import NavBar from './navbar';
 import Location from './locations';
 import data from './data.js';
@@ -21,6 +20,7 @@ const code_indexjs = `import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -44,99 +44,7 @@ const code_indexhtml = `<!DOCTYPE html>
   </body>
 </html>`;
 
-const travelCss = `@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
- }
-html {
-  margin-top: 0;
-}
-nav
-{
-  position: relative;
-  background-color:#F55A5A;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: white;
-}
-.JournalTitle
-{
-  text-align: center;
-}
-.EarthIcon
-{
-  padding-right: 15px;
-}
-.locationImage
-{
-  width:450px;
-  height: 300px;
-  border-radius: 5px;
-  padding: 20px;
-  margin: auto;
-  display: block;
-
-}
-.locationName{
-  text-transform: uppercase;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-.locationDot
-{
-  margin-right: 5px;
-  color: #F55A5A;
-}
-.locationMapLink, .locationName
-{
-  display: inline-block;
-}
-
-.locationMapLink
-{
-  margin-left: 15px;
-  font-size: 14px;
-  color:#918E9B
-}
-.locationTitle
-{
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 30.26px;
-  margin-bottom: 20px;
-}
-.date
-{
-  margin-bottom: 10px;
-}
-.location
-{
-  display: grid;
-  row-gap: 15px;
-  margin: 20px;
-  grid-template-columns: 1fr 3fr;
-  border-bottom: #F55A5A ridge;
-}
-.image
-{
-  grid-row: 1;
-  grid-column: 1;
-  display: flex;
-  justify-content: center;
-}
-.text
-{
-  grid-row: 1;
-  grid-column: 2;
-  padding-top: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-right: 10px;
-  margin-bottom:10px;
-}
-.countryFlag
+const travelCss = `.countryFlag
 {
   width: 18px;
   height: 18px;
@@ -144,30 +52,40 @@ nav
 
 const code_locationjs = `import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 export default function Location(props) {
   return (
-    <div className="location">
-      <div className="image">
-        <img src={props.x.imageUrl} alt="Location" className="locationImage"></img>
-      </div>
-
-      <div className="text">
-        <span>
-          <p className="locationName">
-            <FontAwesomeIcon icon={faLocationDot} className="locationDot" />
-            {props.x.location}
+    <Container>
+      <Row className="my-3 border-bottom border-danger border-2">
+        <Col sm={12} lg={6}  className=" d-flex align-items-center justify-content-center">
+          <img src={props.x.imageUrl} alt="Location" className="w-75"></img>
+        </Col>
+        <Col sm={12} lg={6} className="p-3 text-center">
+            <p className="text-uppercase">
+              <FontAwesomeIcon icon={faLocationDot} className="text-danger" /> &nbsp;
+              {props.x.location} 
+            </p>
+            <a href={props.x.googleMapsUrl} target="_new">
+              View on Google Maps
+            </a>
+            &nbsp;
+            <img
+              src={props.x.flag}
+              alt="Country flag"
+              className="countryFlag
+"
+            ></img>
+         
+          <h1>{props.x.title}</h1>
+          <p>
+            {props.x.startDate} - {props.x.endDate}
           </p>
-          <a className="locationMapLink" href={props.x.googleMapsUrl} target="_new">
-            View on Google Maps <img src={props.x.flag} alt="Country flag" className="countryFlag"></img>
-          </a>
-        </span>
-        <h1 className="locationTitle">{props.x.title}</h1>
-        <p className="date">
-          {props.x.startDate} - {props.x.endDate}
-        </p>
-        <p>{props.x.description}</p>
-      </div>
-    </div>
+          <p>{props.x.description}</p>
+        </Col>
+      </Row>
+    </Container>
   );
 }`;
 
@@ -175,9 +93,10 @@ const code_navbar = `import { FontAwesomeIcon } from '@fortawesome/react-fontawe
 import { faEarthAmerica } from '@fortawesome/free-solid-svg-icons';
 export default function NavBar() {
   return (
-    <nav>
-      <h2 className="JournalTitle">
-        <FontAwesomeIcon icon={faEarthAmerica} className="EarthIcon" />
+    <nav className='bg-danger p-1'>
+      <h2 className="text-center text-light">
+        <FontAwesomeIcon icon={faEarthAmerica}/>
+        &nbsp;
         My Travel Journal
       </h2>
     </nav>
@@ -226,9 +145,10 @@ export default [
   },
 ];`;
 
+
 export default function TravelJournal() {
   return (
-    <div className="bg-secondary text-third text-center">
+    <div className="bg-secondary text-third text-center border border-top-0 border-5 border-dark mb-5">
       <Sandpack
         options={{
           showLineNumbers: true, // default - true
@@ -246,6 +166,7 @@ export default function TravelJournal() {
           '/locations.js': code_locationjs,
           '/navbar.js': code_navbar,
           '/data.js': code_datajs,
+          
         }}
         theme={monokaiPro}
         customSetup={{
@@ -257,6 +178,8 @@ export default function TravelJournal() {
             '@fortawesome/free-regular-svg-icons': '^6.1.1',
             '@fortawesome/free-solid-svg-icons': '^6.1.1',
             '@fortawesome/react-fontawesome': '^0.2.0',
+            'react-bootstrap': '^2.5.0',
+            'bootstrap': '^5.2.2'
           },
         }}
       />

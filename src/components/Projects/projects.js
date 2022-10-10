@@ -17,11 +17,19 @@ const Projects = () => (
     />
     <ProjectContainer
       title="Bank Teller"
-      description=""
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eum ipsam atque quas animi quod
+      nihil architecto accusantium vel rem quidem cumque deserunt voluptatum ratione, iure temporibus ab
+      maxime ut?"
       githubUrl="https://github.com/1Pete3/Bank-Teller"
     />
-    
-    
+    <ProjectContainer
+      title="Travel Journal"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eum ipsam atque quas animi quod
+                nihil architecto accusantium vel rem quidem cumque deserunt voluptatum ratione, iure temporibus ab
+                maxime ut?"
+      githubUrl="https://github.com/1Pete3/Travel-Journal"
+    />
+    <TravelJournal />
   </div>
 );
 export default Projects;
