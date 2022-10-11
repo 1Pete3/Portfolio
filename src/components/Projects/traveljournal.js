@@ -4,7 +4,7 @@ import { monokaiPro } from '@codesandbox/sandpack-themes';
 const code_appjs = `import NavBar from './navbar';
 import Location from './locations';
 import data from './data.js';
-const locationData = data.map((x) => <Location id={x.id} x={x} />);
+const locationData = data.map((x) => <Location id={x.id} x={x} key={x.id} />);
 function App() {
   return (
     <div className="App">
@@ -150,12 +150,14 @@ export default function TravelJournal() {
   return (
     <div className="bg-secondary text-third text-center border border-top-0 border-5 border-dark mb-5">
       <Sandpack
+    
         options={{
           showLineNumbers: true, // default - true
           showInlineErrors: true, // default - false
           wrapContent: true, // default - false
           editorHeight: 400, // default - 300
           editorWidthPercentage: 40, // default - 50
+          
         }}
         template="react"
         files={{

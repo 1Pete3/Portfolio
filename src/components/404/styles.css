@@ -1,21 +1,5 @@
-* {
-  -webkit-font-smoothing: antialiased;
-}
 
-.NotFoundbox {
-  width: 150px;
-  height: 150px;
-  background: #d34f73ff;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  text-align: center;
-  justify-content: center;
-}
-.notFoundText{
-    text-align:center;  
-    margin-top: 50px;
+.textContainer{
+  height: 90vh;
+  
 }

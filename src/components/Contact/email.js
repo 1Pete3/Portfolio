@@ -29,8 +29,8 @@ const Email = () => {
       );
   };
   return (
-    <Form className="border border-3 border-fourth m-2" onSubmit={sendEmail} ref={form}>
-      <Form.Group className="mb-3">
+    <Form className="border border-3 border-fourth w-100" onSubmit={sendEmail} ref={form}>
+      <Form.Group >
         <Row className="m-3">
           <Col lg={6}>
             <Form.Label className="text-fourth" placeholder="Enter Your first name">

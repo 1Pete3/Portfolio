@@ -7,12 +7,12 @@ import Button from 'react-bootstrap/Button';
 import { useEffect, useState } from 'react';
 import './projects.css';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import { e } from 'language-colors';
 const { Octokit } = require('@octokit/core');
 
 const ProjectContainer = (props) => {
   let string = props.title;
 
-  console.log(window.screen.width)
   const colors = (programmingLanguage) => {
     if (programmingLanguage === 'C++') {
       return 'color-cpp';
@@ -28,7 +28,10 @@ const ProjectContainer = (props) => {
       return 'color-scss';
     } else if (programmingLanguage === 'C#') {
       return 'color-csharp';
-    } else {
+    }else if (programmingLanguage === 'Java') {
+      return 'color-java';
+    } 
+    else {
       return 'text-primary';
     }
   };
@@ -43,15 +46,26 @@ const ProjectContainer = (props) => {
       if (string.includes(' ')) {
         string = props.title.split('');
         string.splice(string.indexOf(' '), 1, '-');
-
         string = string.join('');
-      }
+        const portfolioData = await octokit.request('GET /repos/{owner}/{repo}/languages', {
+          owner: '1pete3',
+          repo: `${string}`,
+        });
+        setUsedLanguage(Object.entries(portfolioData.data));
+      } else if (string === 'PromlyApp') {
+        const promlyData = await octokit.request('GET /repos/{owner}/{repo}/languages', {
+          owner: 'shanec1225',
+          repo: `${string}`,
+        });
+        setUsedLanguage(Object.entries(promlyData.data));
+      } else {
+        const portfolioData = await octokit.request('GET /repos/{owner}/{repo}/languages', {
+          owner: '1pete3',
+          repo: `${string}`,
+        });
 
-      const portfolioData = await octokit.request('GET /repos/{owner}/{repo}/languages', {
-        owner: '1pete3',
-        repo: `${string}`,
-      });
-      setUsedLanguage(Object.entries(portfolioData.data));
+        setUsedLanguage(Object.entries(portfolioData.data));
+      }
     };
     fetchData();
   }, []);
@@ -61,11 +75,10 @@ const ProjectContainer = (props) => {
     total += Number(usedLanguage[i][1]);
   }
 
-
   const programmingLanguage = usedLanguage.map((x) => {
     let percentage = 0;
     percentage = ((100 * x[1]) / total).toFixed(1);
-   
+
     return (
       <div key={x[1]}>
         <div>
@@ -79,11 +92,7 @@ const ProjectContainer = (props) => {
   });
 
   function StackedExample() {
-    return (
-      <ProgressBar className='my-2'>
-        {test}
-      </ProgressBar>
-    );
+    return <ProgressBar className="my-2">{test}</ProgressBar>;
   }
 
   const test = usedLanguage.map((y) => {
@@ -91,7 +100,15 @@ const ProjectContainer = (props) => {
     percentage = ((100 * y[1]) / total).toFixed(1);
 
     return (
-        <ProgressBar striped variant={colors(y[0])} animated now={percentage} key={y} label={`${percentage}%`} visuallyHidden />
+      <ProgressBar
+        striped
+        variant={colors(y[0])}
+        animated
+        now={percentage}
+        key={y}
+        label={`${percentage}%`}
+        visuallyHidden
+      />
     );
   });
 
@@ -105,7 +122,7 @@ const ProjectContainer = (props) => {
 
       <Row>
         <Col xs={12} sm={12} md={6} lg={6} className="my-auto">
-          <p className='p-4'>{props.description}</p>
+          <p className="p-4">{props.description}</p>
         </Col>
 
         <Col xs={12} sm={12} md={6} lg={6} className="my-auto">

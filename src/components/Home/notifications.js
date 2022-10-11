@@ -20,7 +20,7 @@ function Notifications() {
       className="position-relative notifications"
       style={{ minHeight: '240px' }}
     >
-      <ToastContainer position="top-end" className="p-3 mt-5">
+      <ToastContainer position="middle-center" className="p-3">
         <Toast show={showA} onClose={toggleShowA} className="border border-3 border-fourth">
           <Toast.Header>
             <img src={toast2img} className="rounded " alt="" />

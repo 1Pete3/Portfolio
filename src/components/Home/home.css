@@ -1,4 +1,10 @@
-.homePage
-{
-    font-size: 26px !important;
+.homePage {
+  font-size: 26px !important;
+  background-color: #3e282bff;
+}
+.welcomeCard {
+  width: 700px;
+}
+.homePageContent {
+  height: 90vh;
 }

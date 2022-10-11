@@ -22,6 +22,11 @@ const Projects = () => {
         githubUrl="https://github.com/1Pete3/Bank-Teller"
       />
       <ProjectContainer
+        title="PromlyApp"
+        description="Promly combines mental health experts and an entrepreneurial Gen Z team aiming to provide a support system that connects individuals from all over world between the ages of 13 - 19 years old based on similar interests. Promly promotes productivity and positive mental health by having built in resources for those who may lack motivation or are struggling with depression. These resources are completely free and built in the app to help mitigate teen suicide rates and help build connections. The objective of this project was to work with a group of three other students to create an Android Application based off of a Figma file for the IOS version of the app. Our team followed agile practices over the course of a semester. To see my contributions for this project checkout the different branches in GitHub."
+        githubUrl="https://github.com/shanec1225/PromlyApp/tree/1by2day"
+      />
+      <ProjectContainer
         title="Travel Journal"
         description="This project was created using React and styling using Bootstrap. It features various places that I have visted. This was just a practice project for me to get familiar with React and the data comes from the data.js file. Feel free to mess around
         with it by modifying the files. Different files can be accessed by
@@ -29,6 +34,7 @@ const Projects = () => {
         pressing the icon in the bottom right corner of the project."
         githubUrl="https://github.com/1Pete3/Travel-Journal"
       />
+      
       <TravelJournal />
     </div>
   );
