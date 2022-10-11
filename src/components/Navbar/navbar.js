@@ -16,7 +16,7 @@ const TopNav = () => {
     <motion.div whileHover={{ scale: 1.1 }} transition={{ type: 'spring', stiffness: 200, damping: 10 }}>
       <LinkContainer to="/">
         <Navbar.Brand className="ms-5">
-          <img src={logo} width="150" alt="logo"  exact path="/" component={Home} to="/" className="ms-4"/>
+          <img src={logo} width="150" alt="logo"  exact path="/" to="/" className="ms-4"/>
         </Navbar.Brand>
       </LinkContainer>
     </motion.div>

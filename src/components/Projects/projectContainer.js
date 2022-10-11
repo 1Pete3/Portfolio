@@ -105,7 +105,7 @@ const ProjectContainer = (props) => {
 
       <Row>
         <Col xs={12} sm={12} md={6} lg={6} className="my-auto">
-          <p>{props.description}</p>
+          <p className='p-4'>{props.description}</p>
         </Col>
 
         <Col xs={12} sm={12} md={6} lg={6} className="my-auto">

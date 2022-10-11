@@ -6,11 +6,7 @@ img
 {
     border-radius: 5px;
 }
-.carouselContainer{
-    width: fit-content !important;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 .hobbyLinks {
     -webkit-transition: color 2s;
     transition: color 2s;
