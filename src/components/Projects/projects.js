@@ -1,7 +1,5 @@
 import TopNav from '../Navbar/navbar';
 import TravelJournal from './traveljournal';
-import BankTeller from './bankteller';
-import Github from './github';
 import ProjectContainer from './projectContainer';
 import './projects.css';
 const Projects = () => {
@@ -13,7 +11,7 @@ const Projects = () => {
         description="Curious how I created this website? Check out the code on GitHub. Various API's were used in this website like emailjs, YouTube, Google Maps, etc. For styling, Bootstrap, React Bootstrap, SCSS, CSS and Framer Motion were all used. My animations come from Framer Motion as well, and the Icons are from fontawesome. I created my custom logo on the top left nav bar by using Canva and Pixelartmaker. The dependencies that were used can be found in the code as well, there's a lot. I did not include a sandbox or images for this project since you are on my website already. "
         githubUrl="https://github.com/1Pete3/Portfolio"
       />
-     
+
       <ProjectContainer
         title="Bank Teller"
         description="This project was created using C++ and it's purpose was to mimic the transactions a bank teller would have to do
@@ -34,7 +32,7 @@ const Projects = () => {
         pressing the icon in the bottom right corner of the project."
         githubUrl="https://github.com/1Pete3/Travel-Journal"
       />
-      
+
       <TravelJournal />
     </div>
   );

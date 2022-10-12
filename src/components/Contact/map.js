@@ -18,8 +18,8 @@ const MyLocation = () => {
   
 
 const Map = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   const center = useMemo(() => ({ lat: 41.76371, lng: -72.685097 }), []);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   useEffect(() => {
     window.addEventListener("resize", function() {
         setWindowWidth(window.innerWidth)

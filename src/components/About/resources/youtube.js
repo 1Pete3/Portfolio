@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import YouTubeChannelContainer from './youtubeChannelContainer';
-
+import Error from './error'
 // [FreeCodeCamp,Coding Train,Alvin the Programmer,PedroTech,Bro Code]
 const YouTube = () => {
   const [youtubeData, setYoutubeData] = useState([]);
@@ -56,7 +56,6 @@ const YouTube = () => {
       )
       .catch((error) => {
         // handle error
-
         console.log(error);
       })
       .then(() => {
@@ -68,6 +67,6 @@ const YouTube = () => {
     return <YouTubeChannelContainer key={items.id} items={items} />;
   });
 
-  return <div className="channelCard">{channels}</div>;
+  return <div className="channelCard">{channels.length !== 7 ? <Error /> : {channels} }</div>;
 };
 export default YouTube;
